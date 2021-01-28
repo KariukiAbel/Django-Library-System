@@ -4,6 +4,11 @@ from django.db import models
 
 #creates a table in db.sqlite
 class Book(models.Model):
+    
+    #returns the database results
+    def __str__(self):
+        return self.name + " - " + self.author
+    
     name = models.CharField(max_length=255)
     author = models.CharField(max_length=255)
     price = models.CharField(max_length=50)
