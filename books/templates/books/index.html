@@ -18,5 +18,5 @@
 <ul>{%for book in all_books%}
     <li>
         <!-- <a href="/books/{{book.id}}/">{{book.name}}</a> -->
-        <a href="{% url 'detail' book.id %}">{{book.name}}</a>
+        <a href="{% url 'books:detail' book.id %}">{{book.name}}</a>
     </li>{%endfor%}</ul>
