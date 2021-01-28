@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -6,17 +6,18 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='../../static/books/style.css'>
+    <!-- <script src='main.js'></script> -->
 </head>
 
 <body>
 
+    <ul>{%for book in all_books%}
+        <li>
+            <!-- <a href="/books/{{book.id}}/">{{book.name}}</a> -->
+            <a href="{% url 'books:detail' book.id %}">{{book.name}}</a>
+        </li>{%endfor%}</ul>
+
 </body>
 
-</html> -->
-<ul>{%for book in all_books%}
-    <li>
-        <!-- <a href="/books/{{book.id}}/">{{book.name}}</a> -->
-        <a href="{% url 'books:detail' book.id %}">{{book.name}}</a>
-    </li>{%endfor%}</ul>
+</html>
