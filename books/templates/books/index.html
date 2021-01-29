@@ -7,15 +7,23 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../../static/books/style.css'>
-    <!-- <script src='main.js'></script> -->
+    <link rel="stylesheet" type="txt/css" href="../../bootstrap-4.3.1-dist/css/bootstrap.css">
+    <!-- <link rel="stylesheet" type="text/js" href="../../bootstrap-4.3.1-dist/js/bootstrap.min.js"> -->
+    <!-- <script src='main.js'>
+    </script> -->
 </head>
 
 <body>
 
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'books:index' %}">The BookStore</a>
+        </div>
+    </nav>
     <ul>{%for book in all_books%}
         <li>
-            <!-- <a href="/books/{{book.id}}/">{{book.name}}</a> -->
-            <a href="{% url 'books:detail' book.id %}">{{book.name}}</a>
+            <!-- <a href=" /books/{{book.id}}/ ">{{book.name}}</a> -->
+            <a href="{% url 'books:detail' book.id %} ">{{book.name}}</a>
         </li>{%endfor%}</ul>
 
 </body>
